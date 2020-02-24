@@ -44,7 +44,6 @@ public class PlayerController : MonoBehaviour
         // if button pressed
         if (m_MovePress.state)
         {
-            Debug.Log(m_MoveValue.axis);
             // add, clamp
             m_Speed += m_MoveValue.axis.y * m_Sensitivity;
             m_Speed = Mathf.Clamp(m_Speed, -m_MaxSpeed, m_MaxSpeed); // can reduce backward speed here
