@@ -93,11 +93,7 @@ namespace Valve.VR.InteractionSystem
             // disable collisions when holding something
             if (hand.currentAttachedObject != null)
             {
-<<<<<<< HEAD
-                // collisionsEnabled = false;
-=======
                 collisionsEnabled = false;
->>>>>>> bceb42adee96e429879b45c71ad00e3244f3465c
             }
             else
             {
