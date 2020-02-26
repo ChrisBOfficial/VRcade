@@ -61,6 +61,13 @@ namespace Valve.VR.InteractionSystem
         [HideInInspector]
         public Interactable interactable;
 
+<<<<<<< HEAD
+        public SphereCollider snapTo;
+        public Vector3 snapOffset;
+        public Vector3 snapRotation;
+
+=======
+>>>>>>> bceb42adee96e429879b45c71ad00e3244f3465c
 
         //-------------------------------------------------
         protected virtual void Awake()
@@ -133,6 +140,8 @@ namespace Valve.VR.InteractionSystem
             }
 		}
 
+<<<<<<< HEAD
+=======
         //-------------------------------------------------
         protected virtual void OnAttachedToHand( Hand hand )
 		{
@@ -157,10 +166,15 @@ namespace Valve.VR.InteractionSystem
 
 		}
 
+>>>>>>> bceb42adee96e429879b45c71ad00e3244f3465c
 
         //-------------------------------------------------
         protected virtual void OnDetachedFromHand(Hand hand)
         {
+<<<<<<< HEAD
+            rigidbody.isKinematic = false;
+=======
+>>>>>>> bceb42adee96e429879b45c71ad00e3244f3465c
             attached = false;
 
             onDetachFromHand.Invoke();
@@ -227,6 +241,46 @@ namespace Valve.VR.InteractionSystem
             }
         }
 
+<<<<<<< HEAD
+        private bool snapped = false;
+        private bool freezeSnap = false;
+        //-------------------------------------------------
+        protected virtual void OnAttachedToHand(Hand hand)
+        {
+            //Debug.Log("<b>[SteamVR Interaction]</b> Pickup: " + hand.GetGrabStarting().ToString());
+            rigidbody.useGravity = true;
+            if (snapped)
+            {
+                snapped = false;
+                freezeSnap = true;
+            }
+
+            hadInterpolation = this.rigidbody.interpolation;
+
+            attached = true;
+
+            onPickUp.Invoke();
+
+            hand.HoverLock(null);
+
+            rigidbody.interpolation = RigidbodyInterpolation.None;
+
+            if (velocityEstimator != null)
+                velocityEstimator.BeginEstimatingVelocity();
+
+            attachTime = Time.time;
+            attachPosition = transform.position;
+            attachRotation = transform.rotation;
+
+        }
+
+        //-------------------------------------------------
+        protected virtual void HandAttachedUpdate(Hand hand)
+        {
+            if (hand.IsGrabEnding(this.gameObject))
+            {
+                hand.DetachObject(gameObject, restoreOriginalParent);
+=======
         //-------------------------------------------------
         protected virtual void HandAttachedUpdate(Hand hand)
         {
@@ -243,12 +297,43 @@ namespace Valve.VR.InteractionSystem
                 // will be at the end of the frame, and the object may appear
                 // to teleport behind the hand when the player releases it.
                 //StartCoroutine( LateDetach( hand ) );
+>>>>>>> bceb42adee96e429879b45c71ad00e3244f3465c
             }
 
             if (onHeldUpdate != null)
                 onHeldUpdate.Invoke(hand);
+<<<<<<< HEAD
+
+            if (snapped && !freezeSnap)
+            {
+                transform.position = new Vector3(snapTo.transform.position.x + snapOffset.x, snapTo.transform.position.y + snapOffset.y, snapTo.transform.position.z + snapOffset.z);
+                // transform.localEulerAngles = snapRotation;
+                hand.DetachObject(gameObject, restoreOriginalParent);
+            }
         }
 
+        //-------------------------------------------------
+        protected virtual void OnTriggerEnter(Collider other)
+        {
+            if (other == snapTo && !freezeSnap)
+            {
+                snapped = true;
+                // rigidbody.useGravity = false;
+                rigidbody.isKinematic = true;
+            }
+        }
+
+        protected virtual void OnTriggerExit(Collider other)
+        {
+            if (other == snapTo)
+            {
+                freezeSnap = false;
+            }
+        }
+=======
+        }
+
+>>>>>>> bceb42adee96e429879b45c71ad00e3244f3465c
 
         //-------------------------------------------------
         protected virtual IEnumerator LateDetach( Hand hand )
@@ -277,7 +362,11 @@ namespace Valve.VR.InteractionSystem
             if (velocityEstimator != null)
                 velocityEstimator.FinishEstimatingVelocity();
 		}
+<<<<<<< HEAD
+    }
+=======
 	}
+>>>>>>> bceb42adee96e429879b45c71ad00e3244f3465c
 
     public enum ReleaseStyle
     {
