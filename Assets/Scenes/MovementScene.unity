@@ -365,7 +365,7 @@ Transform:
   m_GameObject: {fileID: 1031756720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -389,12 +389,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 650256279}
-  m_Sensitivity: 1
-  m_MaxSpeed: 1
-  m_MovePress:
+  m_WalkPress:
+    actionPath: 
+    needsReinit: 0
+  m_WalkValue:
+    actionPath: 
+    needsReinit: 0
+  m_RunPress:
     actionPath: /actions/default/in/Teleport
     needsReinit: 0
-  m_MoveValue:
+  m_RunValue:
     actionPath: /actions/default/in/MoveAround
     needsReinit: 0
 --- !u!143 &1515495995
