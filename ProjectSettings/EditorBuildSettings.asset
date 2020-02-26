@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/item-snapping.unity
+    guid: 68820193a845abf43913fd8c9ba5193f
   m_configObjects: {}
