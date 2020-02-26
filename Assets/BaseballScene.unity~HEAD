@@ -335,15 +335,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4313353733334626, guid: a40c0e85ffc25194492d65c4676ab357, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.131
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4313353733334626, guid: a40c0e85ffc25194492d65c4676ab357, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.323
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4313353733334626, guid: a40c0e85ffc25194492d65c4676ab357, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.135
+      value: -1.043
       objectReference: {fileID: 0}
     - target: {fileID: 4313353733334626, guid: a40c0e85ffc25194492d65c4676ab357, type: 3}
       propertyPath: m_LocalRotation.x
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
-    actionSetPath: 
+    actionSetPath: /actions/default
   hideHandOnAttach: 1
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
@@ -503,8 +503,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.75, z: 0.05}
-  m_Center: {x: 0, y: 0.4, z: 0}
+  m_Size: {x: 0.15132575, y: 0.7892593, z: 0.18332553}
+  m_Center: {x: -0.0043473393, y: 0.39945298, z: 0.008709669}
 --- !u!64 &344005329
 MeshCollider:
   m_ObjectHideFlags: 0
