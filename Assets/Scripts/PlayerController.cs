@@ -7,14 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject head;
 
-    public SteamVR_Action_Boolean m_WalkPress = null;
-    public SteamVR_Action_Vector2 m_WalkValue = null;
+    public SteamVR_Action_Boolean m_MovePress = null;
+    public SteamVR_Action_Vector2 m_MoveValue = null;
 
-    public SteamVR_Action_Boolean m_RunPress = null;
-    public SteamVR_Action_Vector2 m_RunValue = null;
-
-    private float m_Sensitivity = 1.0f; // -1 to 1
-    private float m_MaxSpeed = 1.0f;
+    private float m_Sensitivity = 0.2f; // -1 to 1
+    private float m_MaxWalkSpeed = 2.0f;
+    private float m_MaxRunSpeed = 5.0f;
 
     private float m_Speed = 0.0f;
 
@@ -37,22 +35,24 @@ public class PlayerController : MonoBehaviour
         Quaternion orientation = Quaternion.Euler(orientationEuler);
         Vector3 movement = Vector3.zero;
 
-        // if not moving
-        if (m_RunPress.GetStateUp(SteamVR_Input_Sources.Any))
+        if (m_MovePress.GetStateUp(SteamVR_Input_Sources.Any))
         {
             m_Speed = 0;
         }
-
-        // if button pressed
-        if (m_RunPress.state)
+        if (m_MovePress.state)
         {
-            // add, clamp
-            m_Speed += m_RunValue.axis.y * m_Sensitivity;
-            m_Speed = Mathf.Clamp(m_Speed, -m_MaxSpeed, m_MaxSpeed); // can reduce backward speed here
-
-            // orientation - moving in the direction we are looking at
-            movement += orientation * (m_Speed * Vector3.forward) * Time.deltaTime;
+            float yMoveValue = m_MoveValue.axis.y;
+            m_Speed += yMoveValue * m_Sensitivity;
+            if (yMoveValue > 0.7 || yMoveValue < -0.7)
+            {
+                m_Speed = Mathf.Clamp(m_Speed, -m_MaxRunSpeed, m_MaxRunSpeed); // set run speed
+            }
+            else
+            {
+                m_Speed = Mathf.Clamp(m_Speed, -m_MaxWalkSpeed, m_MaxWalkSpeed); // set walk speed
+            }            
         }
+        movement += orientation * (m_Speed * Vector3.forward) * Time.deltaTime;
 
         // apply
         m_CharacterController.Move(movement);
