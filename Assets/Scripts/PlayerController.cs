@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public SteamVR_Action_Boolean m_MovePress = null;
     public SteamVR_Action_Vector2 m_MoveValue = null;
 
-    private float m_Sensitivity = 1.0f; // -1 to 1
+    private float m_Sensitivity = 0.2f; // -1 to 1
     private float m_MaxWalkSpeed = 2.0f;
     private float m_MaxRunSpeed = 5.0f;
 
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
         Quaternion orientation = Quaternion.Euler(orientationEuler);
         Vector3 movement = Vector3.zero;
 
+        Debug.Log(m_MoveValue.axis);
         // if not moving or touching/pressing at the center
         if (m_MoveValue.axis == Vector2.zero)
         {

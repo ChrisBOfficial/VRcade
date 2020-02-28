@@ -393,10 +393,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 650256279}
-  m_WalkPress:
-    actionPath: /actions/default/in/InteractUI
+  m_MovePress:
+    actionPath: /actions/default/in/Teleport
     needsReinit: 0
-  m_WalkValue:
+  m_MoveValue:
     actionPath: /actions/default/in/MoveAround
     needsReinit: 0
 --- !u!143 &1515495995
