@@ -72,12 +72,11 @@ namespace Valve.VR.InteractionSystem
             interactable = GetComponent<Interactable>();
 
 
-
             rigidbody = GetComponent<Rigidbody>();
             rigidbody.maxAngularVelocity = 50.0f;
 
 
-            if(attachmentOffset != null)
+            if (attachmentOffset != null)
             {
                 // remove?
                 //interactable.handFollowTransform = attachmentOffset;
@@ -251,9 +250,9 @@ namespace Valve.VR.InteractionSystem
 
             if (snapped && !freezeSnap)
             {
-                transform.position = new Vector3(snapTo.transform.position.x + snapOffset.x, snapTo.transform.position.y + snapOffset.y, snapTo.transform.position.z + snapOffset.z);
-                // transform.localEulerAngles = snapRotation;
                 hand.DetachObject(gameObject, restoreOriginalParent);
+                transform.position = new Vector3(snapTo.transform.position.x + snapOffset.x, snapTo.transform.position.y + snapOffset.y, snapTo.transform.position.z + snapOffset.z);
+                transform.Rotate(snapRotation);
             }
         }
 
