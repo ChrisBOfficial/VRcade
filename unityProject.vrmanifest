@@ -5,7 +5,11 @@
       "app_key": "application.generated.unity.vrcade.exe",
       "launch_type": "url",
       "url": "steam://launch/",
+<<<<<<< HEAD
+      "action_manifest_path": "E:\\VRcade\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+=======
       "action_manifest_path": "C:\\Users\\vrcart01\\Documents\\Rinish\\version 3\\VRcade\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+>>>>>>> master
       "strings": {
         "en_us": {
           "name": "VRcade [Testing]"
