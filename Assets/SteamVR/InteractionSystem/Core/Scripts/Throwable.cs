@@ -61,12 +61,31 @@ namespace Valve.VR.InteractionSystem
         [HideInInspector]
         public Interactable interactable;
 
+        // Snapping controllers
         public SphereCollider snapTo;
         public Vector3 snapOffset;
         public Vector3 snapRotation;
         public bool readyDestroy = false;
         private bool freezeSnap = false;
         private bool snapped = false;
+
+        // Mesh colliders to disable for arm objects
+        public bool isArm;
+        public MeshCollider mc_arm;
+        public MeshCollider mc_finger;
+        public MeshCollider mc_finger2;
+        public MeshCollider mc_cube;
+        public MeshCollider mc_thumb;
+
+        // Mesh colliders to disable for the head
+        public bool isHead;
+        public MeshCollider mc_leftCylinder;
+        public MeshCollider mc_leftTorus;
+        public MeshCollider mc_rightCylinder;
+        public MeshCollider mc_rightTorus;
+        public MeshCollider mc_headBase;
+        public MeshCollider mc_headCube;
+        public MeshCollider mc_plane;
 
         //-------------------------------------------------
         protected virtual void Awake()
@@ -139,27 +158,6 @@ namespace Valve.VR.InteractionSystem
 		}
 
         //-------------------------------------------------
-        protected virtual void OnDetachedFromHand(Hand hand)
-        {
-            rigidbody.isKinematic = false;
-            attached = false;
-
-            onDetachFromHand.Invoke();
-
-            hand.HoverUnlock(null);
-
-            rigidbody.interpolation = hadInterpolation;
-
-            Vector3 velocity;
-            Vector3 angularVelocity;
-
-            GetReleaseVelocities(hand, out velocity, out angularVelocity);
-
-            rigidbody.velocity = velocity;
-            rigidbody.angularVelocity = angularVelocity;
-        }
-
-        //-------------------------------------------------
         public virtual void GetReleaseVelocities(Hand hand, out Vector3 velocity, out Vector3 angularVelocity)
         {
             if (hand.noSteamVRFallbackCamera && releaseVelocityStyle != ReleaseStyle.NoChange)
@@ -198,13 +196,13 @@ namespace Valve.VR.InteractionSystem
 
             if (releaseVelocityStyle != ReleaseStyle.NoChange)
             {
-                    float scaleFactor = 1.0f;
-                    if (scaleReleaseVelocityThreshold > 0)
-                    {
-                        scaleFactor = Mathf.Clamp01(scaleReleaseVelocityCurve.Evaluate(velocity.magnitude / scaleReleaseVelocityThreshold));
-                    }
+                float scaleFactor = 1.0f;
+                if (scaleReleaseVelocityThreshold > 0)
+                {
+                    scaleFactor = Mathf.Clamp01(scaleReleaseVelocityCurve.Evaluate(velocity.magnitude / scaleReleaseVelocityThreshold));
+                }
 
-                    velocity *= (scaleFactor * scaleReleaseVelocity);
+                velocity *= (scaleFactor * scaleReleaseVelocity);
             }
         }
 
@@ -237,6 +235,24 @@ namespace Valve.VR.InteractionSystem
             attachPosition = transform.position;
             attachRotation = transform.rotation;
 
+            if (isArm)
+            {
+                mc_arm.enabled = false;
+                mc_finger.enabled = false;
+                mc_finger2.enabled = false;
+                mc_cube.enabled = false;
+                mc_thumb.enabled = false;
+            } 
+            else if (isHead)
+            {
+                mc_leftCylinder.enabled = false;
+                mc_leftTorus.enabled = false;
+                mc_rightCylinder.enabled = false;
+                mc_rightTorus.enabled = false;
+                mc_headBase.enabled = false;
+                mc_headCube.enabled = false;
+                mc_plane.enabled = false;
+            }
         }
 
         //-------------------------------------------------
@@ -254,8 +270,48 @@ namespace Valve.VR.InteractionSystem
             {
                 hand.DetachObject(gameObject, restoreOriginalParent);
                 transform.position = new Vector3(snapTo.transform.position.x + snapOffset.x, snapTo.transform.position.y + snapOffset.y, snapTo.transform.position.z + snapOffset.z);
-                transform.Rotate(snapRotation);
+                transform.localEulerAngles = snapRotation;
                 readyDestroy = true;
+            }
+        }
+
+        //-------------------------------------------------
+        protected virtual void OnDetachedFromHand(Hand hand)
+        {
+            rigidbody.isKinematic = false;
+            attached = false;
+
+            onDetachFromHand.Invoke();
+
+            hand.HoverUnlock(null);
+
+            rigidbody.interpolation = hadInterpolation;
+
+            Vector3 velocity;
+            Vector3 angularVelocity;
+
+            GetReleaseVelocities(hand, out velocity, out angularVelocity);
+
+            rigidbody.velocity = velocity;
+            rigidbody.angularVelocity = angularVelocity;
+
+            if (isArm)
+            {
+                mc_arm.enabled = true;
+                mc_finger.enabled = true;
+                mc_finger2.enabled = true;
+                mc_cube.enabled = true;
+                mc_thumb.enabled = true;
+            }
+            else if (isHead)
+            {
+                mc_leftCylinder.enabled = true;
+                mc_leftTorus.enabled = true;
+                mc_rightCylinder.enabled = true;
+                mc_rightTorus.enabled = true;
+                mc_headBase.enabled = true;
+                mc_headCube.enabled = true;
+                mc_plane.enabled = true;
             }
         }
 

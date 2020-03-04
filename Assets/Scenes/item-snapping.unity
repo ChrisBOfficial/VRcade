@@ -121,6 +121,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &43457625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 43457626}
+  - component: {fileID: 43457628}
+  - component: {fileID: 43457627}
+  m_Layer: 0
+  m_Name: Ball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &43457626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43457625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.239, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 236213093}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &43457627
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43457625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &43457628
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43457625}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &57011001 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6908446697660584809, guid: 0159f566333b55042ad7f368f4518cd5,
@@ -291,8 +344,22 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 843964746}
   snapOffset: {x: 0, y: 0, z: 0}
-  snapRotation: {x: 0, y: 0, z: 0}
+  snapRotation: {x: 0, y: 180, z: -6}
   readyDestroy: 0
+  isArm: 1
+  mc_arm: {fileID: 731467478}
+  mc_finger: {fileID: 1436339067}
+  mc_finger2: {fileID: 939306040}
+  mc_cube: {fileID: 1308025755}
+  mc_thumb: {fileID: 1580866863}
+  isHead: 0
+  mc_leftCylinder: {fileID: 0}
+  mc_leftTorus: {fileID: 0}
+  mc_rightCylinder: {fileID: 0}
+  mc_rightTorus: {fileID: 0}
+  mc_headBase: {fileID: 0}
+  mc_headCube: {fileID: 0}
+  mc_plane: {fileID: 0}
 --- !u!1 &158486661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9147174704327456945, guid: 0159f566333b55042ad7f368f4518cd5,
@@ -373,6 +440,12 @@ PrefabInstance:
 --- !u!1 &236213092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7199902334543741925, guid: 0159f566333b55042ad7f368f4518cd5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1327132557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &236213093 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6081470830831867213, guid: 0159f566333b55042ad7f368f4518cd5,
     type: 3}
   m_PrefabInstance: {fileID: 1327132557}
   m_PrefabAsset: {fileID: 0}
@@ -500,8 +573,22 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 1548962755}
   snapOffset: {x: 0, y: 0, z: 0}
-  snapRotation: {x: 0, y: 0, z: 0}
+  snapRotation: {x: 0, y: 180, z: 0}
   readyDestroy: 0
+  isArm: 0
+  mc_arm: {fileID: 0}
+  mc_finger: {fileID: 0}
+  mc_finger2: {fileID: 0}
+  mc_cube: {fileID: 0}
+  mc_thumb: {fileID: 0}
+  isHead: 1
+  mc_leftCylinder: {fileID: 158486665}
+  mc_leftTorus: {fileID: 2036560102}
+  mc_rightCylinder: {fileID: 1659662413}
+  mc_rightTorus: {fileID: 1964662508}
+  mc_headBase: {fileID: 1596464946}
+  mc_headCube: {fileID: 360587382}
+  mc_plane: {fileID: 963728333}
 --- !u!1 &249058123
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,8 +852,22 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 249058125}
   snapOffset: {x: 0, y: 0, z: 0}
-  snapRotation: {x: 0, y: 0, z: 0}
+  snapRotation: {x: 0, y: 180, z: 6}
   readyDestroy: 0
+  isArm: 1
+  mc_arm: {fileID: 1434912434}
+  mc_finger: {fileID: 1235945042}
+  mc_finger2: {fileID: 463895111}
+  mc_cube: {fileID: 69781309}
+  mc_thumb: {fileID: 1051519122}
+  isHead: 0
+  mc_leftCylinder: {fileID: 0}
+  mc_leftTorus: {fileID: 0}
+  mc_rightCylinder: {fileID: 0}
+  mc_rightTorus: {fileID: 0}
+  mc_headBase: {fileID: 0}
+  mc_headCube: {fileID: 0}
+  mc_plane: {fileID: 0}
 --- !u!1 &562390452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,6 +1408,36 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.09
       objectReference: {fileID: 0}
+    - target: {fileID: -6178375411439666592, guid: 0159f566333b55042ad7f368f4518cd5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.035666946
+      objectReference: {fileID: 0}
+    - target: {fileID: -6178375411439666592, guid: 0159f566333b55042ad7f368f4518cd5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6178375411439666592, guid: 0159f566333b55042ad7f368f4518cd5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9993637
+      objectReference: {fileID: 0}
+    - target: {fileID: -6178375411439666592, guid: 0159f566333b55042ad7f368f4518cd5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 4.088
+      objectReference: {fileID: 0}
+    - target: {fileID: -6178375411439666592, guid: 0159f566333b55042ad7f368f4518cd5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6178375411439666592, guid: 0159f566333b55042ad7f368f4518cd5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6081470830831867213, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1315,7 +1446,7 @@ PrefabInstance:
     - target: {fileID: -6081470830831867213, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.31
+      value: -1.27
       objectReference: {fileID: 0}
     - target: {fileID: -6081470830831867213, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -1571,8 +1702,22 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 857588627}
   snapOffset: {x: 0, y: 0.05, z: 0}
-  snapRotation: {x: 0, y: 0, z: 0}
+  snapRotation: {x: 0, y: 180, z: 0}
   readyDestroy: 0
+  isArm: 0
+  mc_arm: {fileID: 0}
+  mc_finger: {fileID: 0}
+  mc_finger2: {fileID: 0}
+  mc_cube: {fileID: 0}
+  mc_thumb: {fileID: 0}
+  isHead: 0
+  mc_leftCylinder: {fileID: 0}
+  mc_leftTorus: {fileID: 0}
+  mc_rightCylinder: {fileID: 0}
+  mc_rightTorus: {fileID: 0}
+  mc_headBase: {fileID: 0}
+  mc_headCube: {fileID: 0}
+  mc_plane: {fileID: 0}
 --- !u!54 &1327132568
 Rigidbody:
   m_ObjectHideFlags: 0
