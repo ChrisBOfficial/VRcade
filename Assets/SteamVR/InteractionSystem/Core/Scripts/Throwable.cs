@@ -64,6 +64,9 @@ namespace Valve.VR.InteractionSystem
         public SphereCollider snapTo;
         public Vector3 snapOffset;
         public Vector3 snapRotation;
+        public bool readyDestroy = false;
+        private bool freezeSnap = false;
+        private bool snapped = false;
 
         //-------------------------------------------------
         protected virtual void Awake()
@@ -156,7 +159,7 @@ namespace Valve.VR.InteractionSystem
             rigidbody.angularVelocity = angularVelocity;
         }
 
-
+        //-------------------------------------------------
         public virtual void GetReleaseVelocities(Hand hand, out Vector3 velocity, out Vector3 angularVelocity)
         {
             if (hand.noSteamVRFallbackCamera && releaseVelocityStyle != ReleaseStyle.NoChange)
@@ -205,8 +208,6 @@ namespace Valve.VR.InteractionSystem
             }
         }
 
-        private bool snapped = false;
-        private bool freezeSnap = false;
         //-------------------------------------------------
         protected virtual void OnAttachedToHand(Hand hand)
         {
@@ -215,6 +216,7 @@ namespace Valve.VR.InteractionSystem
             if (snapped)
             {
                 snapped = false;
+                readyDestroy = false;
                 freezeSnap = true;
             }
 
@@ -253,6 +255,7 @@ namespace Valve.VR.InteractionSystem
                 hand.DetachObject(gameObject, restoreOriginalParent);
                 transform.position = new Vector3(snapTo.transform.position.x + snapOffset.x, snapTo.transform.position.y + snapOffset.y, snapTo.transform.position.z + snapOffset.z);
                 transform.Rotate(snapRotation);
+                readyDestroy = true;
             }
         }
 
