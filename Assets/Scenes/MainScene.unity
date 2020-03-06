@@ -911,7 +911,7 @@ PrefabInstance:
     - target: {fileID: -6178375411439666592, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: -6178375411439666592, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -961,7 +961,7 @@ PrefabInstance:
     - target: {fileID: -6081470830831867213, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: -6081470830831867213, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -976,7 +976,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 0.331
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -1026,17 +1026,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -1061122766009020480, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -1046,12 +1046,12 @@ PrefabInstance:
     - target: {fileID: -1061122766009020480, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: -1061122766009020480, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: -1061122766009020480, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -1101,7 +1101,7 @@ PrefabInstance:
     - target: {fileID: 1243445300402941354, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 2.44
       objectReference: {fileID: 0}
     - target: {fileID: 1243445300402941354, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -1955,7 +1955,7 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 695212856}
   snapOffset: {x: 0, y: 0, z: 0}
-  snapRotation: {x: 0, y: 180, z: 6}
+  snapRotation: {x: 0, y: 90, z: 6}
   readyDestroy: 0
   isArm: 1
   mc_arm: {fileID: 1068568539}
@@ -2027,7 +2027,7 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 2095818154}
   snapOffset: {x: 0, y: 0, z: 0}
-  snapRotation: {x: 0, y: 180, z: -6}
+  snapRotation: {x: 0, y: 90, z: -6}
   readyDestroy: 0
   isArm: 1
   mc_arm: {fileID: 1068568545}
@@ -2098,8 +2098,8 @@ MonoBehaviour:
       m_Calls: []
   interactable: {fileID: 0}
   snapTo: {fileID: 1769211355}
-  snapOffset: {x: 0, y: 0.05, z: 0}
-  snapRotation: {x: 0, y: 180, z: 0}
+  snapOffset: {x: 0, y: 0.1, z: 0}
+  snapRotation: {x: 0, y: 90, z: 0}
   readyDestroy: 0
   isArm: 0
   mc_arm: {fileID: 0}
@@ -2171,7 +2171,7 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 752152901}
   snapOffset: {x: 0, y: 0, z: 0}
-  snapRotation: {x: 0, y: 180, z: 0}
+  snapRotation: {x: 0, y: 90, z: 0}
   readyDestroy: 0
   isArm: 0
   mc_arm: {fileID: 0}
@@ -2363,7 +2363,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -2373,7 +2373,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -2388,7 +2388,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -2398,17 +2398,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 0159f566333b55042ad7f368f4518cd5,
         type: 3}
@@ -2449,7 +2449,7 @@ MonoBehaviour:
   p_armRight: {fileID: 1068568518}
   p_head: {fileID: 1068568517}
   p_body: {fileID: 1068568491}
-  spawnPoint: {x: -20, y: 0.6, z: 0}
+  spawnPoint: {x: -20, y: 0.76, z: 0}
 --- !u!54 &1319019793
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2613,7 +2613,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1769211353
 GameObject:
   m_ObjectHideFlags: 0
