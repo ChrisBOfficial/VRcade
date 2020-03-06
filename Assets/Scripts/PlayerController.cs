@@ -54,7 +54,12 @@ public class PlayerController : MonoBehaviour
         }
         movement += orientation * (m_Speed * Vector3.forward) * Time.deltaTime;
 
+        Debug.Log(gameObject.transform.position.y);
+
         // apply
         m_CharacterController.Move(movement);
+
+        Vector3 finalPosition = transform.position;
+        transform.position = new Vector3(finalPosition.x, 0, finalPosition.z);
     }
 }
