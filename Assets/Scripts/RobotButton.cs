@@ -9,9 +9,10 @@ public class RobotButton : MonoBehaviour
     void onTriggerEnter(Collider collider)
     {
         Debug.Log("Triggered");
-        if (collider.gameObject.CompareTag("Hand"))
-        {
-            robot.ChangeMode(true);
-        }
+        Debug.Log(collider.gameObject.tag);
+        // if (collider.gameObject.CompareTag("Hand"))
+        // {
+        //     robot.ChangeMode(true);
+        // }
     }
 }
