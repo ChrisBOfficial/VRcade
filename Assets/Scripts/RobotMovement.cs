@@ -9,7 +9,7 @@ public class RobotMovement : MonoBehaviour
 
     public Transform player;
 
-    public enum Modes { unprogrammed, programmed, followPlayer };
+    public enum Modes { notbuilt, unprogrammed, programmed, followPlayer };
     public Modes currentMode;
     
     
@@ -19,7 +19,7 @@ public class RobotMovement : MonoBehaviour
 
     void Start()
     {
-         currentMode = Modes.unprogrammed;
+         currentMode = Modes.notbuilt;
     }
 
     // Update is called once per frame
@@ -33,6 +33,12 @@ public class RobotMovement : MonoBehaviour
                     current = Random.Range(0, waypoints.Length);
                 }
                 transform.position = Vector3.MoveTowards(transform.position, waypoints[current].position, Time.deltaTime * speed);
+                break;
+            case Modes.notbuilt:
+                if (transform.position.y > 0)
+                {
+                    currentMode = Modes.unprogrammed;
+                }
                 break;
         }
         
