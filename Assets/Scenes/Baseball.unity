@@ -307,6 +307,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 50, z: 0}
+--- !u!1001 &1079891961
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
 --- !u!1 &1830701692684770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3435006153166401084, guid: 5d8ae23a335214015bb2115e30766cf4,
@@ -322,7 +379,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1830701692684770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0efa1a21f8a591c4dbd818c4f06b8cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attachmentFlags: 44
@@ -333,8 +390,10 @@ MonoBehaviour:
   scaleReleaseVelocity: 1.1
   scaleReleaseVelocityThreshold: -1
   scaleReleaseVelocityCurve:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 3
+      time: 0
       value: 0.1
       inSlope: 0
       outSlope: 0
@@ -342,7 +401,8 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - time: 1
+    - serializedVersion: 3
+      time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -354,27 +414,19 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   restoreOriginalParent: 0
-  velocityEstimator: {fileID: 0}
-  attached: 0
-  attachTime: 0
-  attachPosition: {x: 0, y: 0, z: 0}
-  attachRotation: {x: 0, y: 0, z: 0, w: 0}
-  attachEaseInTransform: {fileID: 0}
   onPickUp:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   onDetachFromHand:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
-  hadInterpolation: 0
-  rigidbody: {fileID: 0}
   interactable: {fileID: 0}
+  snapTo: {fileID: 0}
+  snapOffset: {x: 0, y: 0, z: 0}
+  snapRotation: {x: 0, y: 0, z: 0}
 --- !u!1001 &3435427271825336286
 PrefabInstance:
   m_ObjectHideFlags: 0
