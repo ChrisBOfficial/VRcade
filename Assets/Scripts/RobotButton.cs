@@ -1,18 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class RobotButton : MonoBehaviour
 {
-    public RobotMovement robot;
+    // public RobotMovement robot;
 
-    void onTriggerEnter(Collider collider)
+    public void onPress(Hand hand)
     {
         Debug.Log("Triggered");
-        Debug.Log(collider.gameObject.tag);
-        // if (collider.gameObject.CompareTag("Hand"))
-        // {
-        //     robot.ChangeMode(true);
-        // }
     }
 }

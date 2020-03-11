@@ -5,10 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/RobotMovementScene.unity
     guid: 6788aa4c206ac2b4aaf08099fb90fe82
-  - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: c1cb6501a65dc5843a2dcc87c810b654
   m_configObjects: {}
