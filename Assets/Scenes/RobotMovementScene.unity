@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingPart: {fileID: 218369477}
-  localMoveDistance: {x: 0, y: -0.05, z: 0}
+  localMoveDistance: {x: 0, y: 0, z: -0.05}
   engageAtPercent: 0.95
   disengageAtPercent: 0.9
   onButtonDown:
@@ -1104,6 +1104,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 109471107}
+    - target: {fileID: 1319019795, guid: 6ba3d3eabffb81a4090d28019b160748, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2092798864}
     - target: {fileID: 124555493021465563, guid: 6ba3d3eabffb81a4090d28019b160748,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1168,6 +1172,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026740710497110472, guid: 6ba3d3eabffb81a4090d28019b160748,
+        type: 3}
+      propertyPath: m_TagString
+      value: Robot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba3d3eabffb81a4090d28019b160748, type: 3}
@@ -1649,3 +1658,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+--- !u!4 &2092798864 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2092798859}
+  m_PrefabAsset: {fileID: 0}

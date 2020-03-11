@@ -3,10 +3,9 @@ using Valve.VR.InteractionSystem;
 
 public class RobotButton : MonoBehaviour
 {
-    // public RobotMovement robot;
-
     public void onPress(Hand hand)
     {
-        Debug.Log("Triggered");
+        GameObject robot = GameObject.FindGameObjectsWithTag("Robot")[0];
+        robot.GetComponent<RobotModeChanger>().ChangeMode(true);
     }
 }
