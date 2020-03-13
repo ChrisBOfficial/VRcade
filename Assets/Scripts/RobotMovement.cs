@@ -13,58 +13,54 @@ public class RobotMovement : MonoBehaviour, RobotModeChanger
     public Modes currentMode;
 
     private Transform currentWaypoint;
-    private int current = 0;
+    private int current;
     private float rotSpeed;
-    private float WPradius = 0.5f;
+    private float WPradius = 1f;
 
     void Start()
     {
          currentMode = Modes.notbuilt;
-         currentWaypoint = waypoints[0];
+         current = 0;
+         currentWaypoint = waypoints[current];
     }
 
-    // Update is called once per frame
+    // Make sure it stays on ground and is always upright
     void Update()
     {
         switch (currentMode)
         {
             case Modes.unprogrammed:
-                Debug.Log(Vector3.Distance(currentWaypoint.transform.position, transform.position));
-                if (Vector3.Distance(currentWaypoint.transform.position, transform.position) < WPradius)
+                if (Vector3.Distance(currentWaypoint.position, this.transform.position) < WPradius)
                 {
-                    Debug.Log("Test");
                     current = Random.Range(0, waypoints.Length);
                     currentWaypoint = waypoints[current];
                 }
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentWaypoint.position), 0.1f);
-                // transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, Time.deltaTime * speed);
-                transform.Translate(0, 0, speed * Time.deltaTime);
+                Vector3 waypointDirection = currentWaypoint.position - this.transform.position;
+                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(waypointDirection), 0.01f);
+                this.transform.Translate(0, 0, speed * Time.deltaTime);
                 break;
             case Modes.notbuilt:
-                if (transform.position.y > 0)
+                if (this.transform.position.y > 0)
                 {
                     currentMode = Modes.unprogrammed;
                 }
                 break;
             case Modes.followPlayer:
-                Vector3 playerDirection = player.position - transform.position;
-                float angle = Vector3.Angle(playerDirection, transform.forward);
+                Vector3 playerDirection = player.position - this.transform.position;
+                float angle = Vector3.Angle(playerDirection, this.transform.forward);
 
                 playerDirection.y = 0;
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(playerDirection), 0.1f);
-
-                if (playerDirection.magnitude > 5)
+                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(playerDirection), 0.01f);
+                if (playerDirection.magnitude > 2)
                 {
-                    transform.Translate(0, 0, speed * Time.deltaTime);
+                    this.transform.Translate(0, 0, speed * Time.deltaTime);
                 }
                 break;
         }
-        
     }
 
     public void ChangeMode(bool pressed)
     {
-        Debug.Log("Changing Mode");
         if (pressed)
         {
             currentMode = Modes.followPlayer;
