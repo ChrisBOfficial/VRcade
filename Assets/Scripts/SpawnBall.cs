@@ -6,7 +6,10 @@ public class SpawnBall : MonoBehaviour
 {
     public float timeBetweenPitches;
     public GameObject ball;
+    public GameObject blueball;
     public float launchAngle;
+
+    int count = 0;
 
     void Start()
     {
@@ -19,7 +22,14 @@ public class SpawnBall : MonoBehaviour
     		Vector3 launchDirection = GetLaunchDirection();
     		Quaternion q = Quaternion.Euler(launchDirection);
 
-    		Instantiate(ball, transform.position, q);
+    		if(count == 0) {
+    			Instantiate(ball, transform.position, q);
+    			count++;
+    		}
+    		else {
+    			Instantiate(blueball, transform.position, q);
+    			count--;
+    		}
     	}
     }
 
