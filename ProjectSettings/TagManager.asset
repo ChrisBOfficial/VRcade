@@ -8,6 +8,10 @@ TagManager:
   - FxTemporaire
   - Bat
   - Socket
+  - projectile
+  - FxTemporaire
+  - Hand
+  - BlueBat
   layers:
   - Default
   - TransparentFX

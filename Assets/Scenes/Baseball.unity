@@ -322,7 +322,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1215494790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0efa1a21f8a591c4dbd818c4f06b8cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attachmentFlags: 44
@@ -367,6 +367,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
+  snapTo: {fileID: 0}
+  snapOffset: {x: 0, y: 0, z: 0}
+  snapRotation: {x: 0, y: 0, z: 0}
+  readyDestroy: 0
+  isArm: 0
+  mc_arm: {fileID: 0}
+  mc_finger: {fileID: 0}
+  mc_finger2: {fileID: 0}
+  mc_cube: {fileID: 0}
+  mc_thumb: {fileID: 0}
+  isHead: 0
+  mc_leftCylinder: {fileID: 0}
+  mc_leftTorus: {fileID: 0}
+  mc_rightCylinder: {fileID: 0}
+  mc_rightTorus: {fileID: 0}
+  mc_headBase: {fileID: 0}
+  mc_headCube: {fileID: 0}
+  mc_plane: {fileID: 0}
 --- !u!1001 &1515629131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -855,6 +873,11 @@ PrefabInstance:
     - target: {fileID: 2173407711720480139, guid: 508a41ec2ff00463596fb4555171d3f7,
         type: 3}
       propertyPath: m_Name
+      value: BlueBat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173407711720480139, guid: 508a41ec2ff00463596fb4555171d3f7,
+        type: 3}
+      propertyPath: m_TagString
       value: BlueBat
       objectReference: {fileID: 0}
     m_RemovedComponents: []

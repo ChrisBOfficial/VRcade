@@ -142,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 3435006153166401084, guid: 5d8ae23a335214015bb2115e30766cf4,
         type: 3}
       propertyPath: m_TagString
-      value: BlueBat
+      value: projectile
       objectReference: {fileID: 0}
     - target: {fileID: 3435427272018345228, guid: 5d8ae23a335214015bb2115e30766cf4,
         type: 3}
