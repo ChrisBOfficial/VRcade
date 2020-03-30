@@ -1,18 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class RobotButton : MonoBehaviour
 {
-    public RobotMovement robot;
+    private float timeToReset;
+    private bool timerIsActive;
+    private GameObject robot;
 
-    void onTriggerEnter(Collider collider)
+    void Start()
     {
-        Debug.Log("Triggered");
-        Debug.Log(collider.gameObject.tag);
-        // if (collider.gameObject.CompareTag("Hand"))
-        // {
-        //     robot.ChangeMode(true);
-        // }
+        timeToReset = 0;
+        robot = GameObject.FindGameObjectsWithTag("Robot")[0];
+        timerIsActive = false;
+    }
+
+    void Update()
+    {
+        if (timerIsActive)
+        {
+            Debug.Log(timeToReset);
+            timeToReset -= Time.deltaTime;
+            if (timeToReset <= 0)
+            {
+                timerIsActive = false;
+                robot.GetComponent<RobotModeChanger>().ChangeMode(false);
+            }
+        }
+    }
+
+    public void onPress(Hand hand)
+    {
+        timeToReset = 10f;
+        timerIsActive = true;
+        robot.GetComponent<RobotModeChanger>().ChangeMode(true);
     }
 }

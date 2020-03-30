@@ -12,6 +12,7 @@ TagManager:
   - FxTemporaire
   - Hand
   - BlueBat
+  - Robot
   layers:
   - Default
   - TransparentFX
