@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenPitches: 2
   ball: {fileID: 8915290582447875333, guid: 8cd58a5c527834696bd5cdf3e8db824a, type: 3}
+  blueball: {fileID: 0}
   launchAngle: 7
 --- !u!1 &5145377698010622105
 GameObject:
