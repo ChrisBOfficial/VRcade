@@ -46,10 +46,9 @@ public class Baseball : MonoBehaviour {
     	//return 150 / velocityMax * 100f;
         //batRB
     	//get the velocity
-    	return GetComponent<Rigidbody>().velocity.magnitude / velocityMax * 50f;
         //return batRB.velocity.magnitude / velocityMax * 50f;
         //velocity = SteamVR_Input._default.inActions.Pose.GetVelocity;
-    	//return Random.Range(collision.relativeVelocity.magnitude / 20, collision.relativeVelocity.magnitude * 20) / velocityMax * 100f;
+    	return Random.Range(collision.relativeVelocity.magnitude / 20, collision.relativeVelocity.magnitude * 20) / velocityMax * 100f;
     }
 
 
