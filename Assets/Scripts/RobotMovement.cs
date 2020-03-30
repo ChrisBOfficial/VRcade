@@ -36,7 +36,7 @@ public class RobotMovement : MonoBehaviour, RobotModeChanger
                     currentWaypoint = waypoints[current];
                 }
                 Vector3 waypointDirection = currentWaypoint.position - this.transform.position;
-                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(waypointDirection), 0.01f);
+                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(waypointDirection), 0.02f);
                 this.transform.Translate(0, 0, speed * Time.deltaTime);
                 break;
             case Modes.notbuilt:
