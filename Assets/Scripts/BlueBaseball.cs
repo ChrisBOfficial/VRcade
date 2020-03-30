@@ -39,10 +39,7 @@ public class BlueBaseball : MonoBehaviour
     }
 
     private float GetBatForce(Rigidbody batRB, Collision collision) {
-    	//return 150 / velocityMax * 100f;
-        //batRB
     	//get the velocity
-        //velocity = pose.GetVelocity("/user/hand/right");
     	return Random.Range(collision.relativeVelocity.magnitude / 20, collision.relativeVelocity.magnitude * 20) / velocityMax * 100f;
     }
 }

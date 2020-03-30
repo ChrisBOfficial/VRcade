@@ -43,11 +43,7 @@ public class Baseball : MonoBehaviour {
     }
 
     private float GetBatForce(Rigidbody batRB, Collision collision) {
-    	//return 150 / velocityMax * 100f;
-        //batRB
     	//get the velocity
-        //return batRB.velocity.magnitude / velocityMax * 50f;
-        //velocity = SteamVR_Input._default.inActions.Pose.GetVelocity;
     	return Random.Range(collision.relativeVelocity.magnitude / 20, collision.relativeVelocity.magnitude * 20) / velocityMax * 100f;
     }
 
