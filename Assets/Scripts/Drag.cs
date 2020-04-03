@@ -21,7 +21,7 @@ public class Drag : MonoBehaviour
      	if(check == false) {
      		Check.count++;
      		check = true;
-        Debug.Log(Check.count);
+        Debug.Log("count " + Check.count);
      	}
      }
      else {
@@ -29,7 +29,7 @@ public class Drag : MonoBehaviour
      	if(check == true) {
      		Check.count--; 
      		check = false;
-        Debug.Log(Check.count);
+        Debug.Log("count " + Check.count);
      	}
      }
  }
