@@ -52,7 +52,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		void Update()
 		{
-			if ( ( destructTime != 0 ) && ( Time.time > destructTime ) )
+			/*if ( ( destructTime != 0 ) && ( Time.time > destructTime ) )
 			{
 				if ( burstOnLifetimeEnd )
 				{
@@ -60,7 +60,9 @@ namespace Valve.VR.InteractionSystem
 				}
 
 				Destroy( gameObject );
-			}
+			}*/
+
+
 		}
 
 
@@ -121,6 +123,11 @@ namespace Valve.VR.InteractionSystem
 			if ( bParticlesSpawned )
 			{
 				return;
+			}
+
+			if(collision.gameObject.name == "Baseball(Clone)" || collision.gameObject.name == "BlueBaseball(Clone)") {
+				SpawnParticles( lifetimeEndParticlePrefab, lifetimeEndSound );
+				Destroy( gameObject );
 			}
 
 			Hand collisionParentHand = null;
