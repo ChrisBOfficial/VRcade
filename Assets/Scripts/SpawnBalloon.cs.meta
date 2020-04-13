@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 750c4d521db3b4b05b8bcdd180f8fea6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BlueBalloon: {fileID: 6897503271543014759, guid: ebd67058957944493b757e744db59811,
+      type: 3}
+  - GreenBalloon: {fileID: 1760019659210065843, guid: 420321a55dc254b13a8d90f2804004d0,
+      type: 3}
+  - TurquoiseBalloon: {fileID: 4712860721926062626, guid: 174f42f42c30d43f69ba1d0b1e49ad4e,
+      type: 3}
+  - TealBalloon: {fileID: 814844439497259345, guid: 74b3544b7038446f9af73dce40475e3d,
+      type: 3}
+  - RedBalloon: {fileID: 5617280635758653339, guid: 345f35e1b6c6041518b359670b0d269f,
+      type: 3}
+  - PurpleBalloon: {fileID: 8121703757476928063, guid: d75362d1c01e44b4bb52f72630ad2ce6,
+      type: 3}
+  - PinkBalloon: {fileID: 8716858732777105340, guid: 6aedb815137074d88998c35c49d9697b,
+      type: 3}
+  - YellowBalloon: {fileID: 5119808938074686510, guid: 3b52ee3192c2245e48d23cca1d99423c,
+      type: 3}
+  - OrangeBalloon: {fileID: 7313079438215570985, guid: 5476851a33be14090aa4d217661ba108,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
