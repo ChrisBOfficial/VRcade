@@ -20,6 +20,13 @@ public class Conveyor : MonoBehaviour
     private void OnCollisionStay(Collision otherThing)
     {
         direction = -transform.right * speed;
-        otherThing.rigidbody.AddForce(direction, ForceMode.Acceleration);
+        if (otherThing.gameObject.tag == "RobotBody") {
+            otherThing.gameObject.transform.position = new Vector3(otherThing.gameObject.transform.position.x - 0.018f, otherThing.gameObject.transform.position.y, otherThing.gameObject.transform.position.z);
+            otherThing.rigidbody.AddForce(direction, ForceMode.Acceleration);
+        } else if (otherThing.gameObject.tag == "RobotHead") {
+            otherThing.gameObject.transform.position = new Vector3(otherThing.gameObject.transform.position.x - 0.006f, otherThing.gameObject.transform.position.y, otherThing.gameObject.transform.position.z);
+        } else {
+            otherThing.gameObject.transform.position = new Vector3(otherThing.gameObject.transform.position.x - 0.007f, otherThing.gameObject.transform.position.y, otherThing.gameObject.transform.position.z);
+        }
     }
 }
