@@ -36,7 +36,7 @@ public class BlueBaseball : MonoBehaviour
     		rb.useGravity = true;
 
     		t.enabled = true;
-    		Destroy(gameObject, 5f);
+    		Destroy(gameObject, 8f);
     	}
     }
 
