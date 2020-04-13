@@ -1,20 +1,23 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Valve.VR;
 
-public class BlueBaseball : MonoBehaviour
-{
+public class Baseball : MonoBehaviour {
 
-	public static bool hold = false;
+    public static bool Rhold = false;
     private AudioSource src;
     public TrailRenderer t;
 
     private Rigidbody rb;
     private float velocityMax = 200f;
 
-    //Vector3 velocity;
+    Vector3 velocity;
+
+    //public SteamVR_Input_Sources LeftInputSource = SteamVR_Input_Sources.LeftHand;
+    //public SteamVR_Input_Sources RightInputSource = SteamVR_Input_Sources.RightHand;
+
     //SteamVR_Action_Pose pose = SteamVR_Input.GetAction<SteamVR_Action_Pose>("Pose");
 
     void Awake() {
@@ -25,7 +28,7 @@ public class BlueBaseball : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision) {
-    	if(collision.gameObject.name == "BlueBat" && hold == true) {
+    	if(collision.gameObject.name == "Bat" && Rhold == true) {
     		rb.velocity = Vector3.zero;
     		src.Play();
     		Physics.IgnoreCollision(collision.gameObject.GetComponent<BoxCollider>(), gameObject.GetComponent<SphereCollider>());
@@ -44,4 +47,6 @@ public class BlueBaseball : MonoBehaviour
     	//get the velocity
     	return Random.Range(collision.relativeVelocity.magnitude / 20, collision.relativeVelocity.magnitude * 20) / velocityMax * 100f;
     }
+
+
 }

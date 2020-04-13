@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace Valve.VR.InteractionSystem
-{
+{   
     //-------------------------------------------------------------------------
     public class Interactable : MonoBehaviour
     {
@@ -291,6 +291,13 @@ namespace Valve.VR.InteractionSystem
 
         protected virtual void OnAttachedToHand(Hand hand)
         {
+            if(gameObject.name == "BlueBat") {
+                BlueBaseball.hold = true;
+            }
+            if(gameObject.name == "Bat") {
+                Baseball.Rhold = true;
+            }
+
             if (activateActionSetOnAttach != null)
                 activateActionSetOnAttach.Activate(hand.handType);
 
@@ -309,6 +316,13 @@ namespace Valve.VR.InteractionSystem
 
         protected virtual void OnDetachedFromHand(Hand hand)
         {
+            if(gameObject.name == "BlueBat") {
+                BlueBaseball.hold = false;
+            }
+            if(gameObject.name == "Bat") {
+                Baseball.Rhold = false;
+            }
+
             if (activateActionSetOnAttach != null)
             {
                 if (hand.otherHand == null || hand.otherHand.currentAttachedObjectInfo.HasValue == false ||

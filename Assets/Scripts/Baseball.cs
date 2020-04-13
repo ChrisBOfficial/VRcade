@@ -6,6 +6,7 @@ using Valve.VR;
 
 public class Baseball : MonoBehaviour {
 
+	public static bool Rhold = false;
     private AudioSource src;
     public TrailRenderer t;
 
@@ -23,11 +24,11 @@ public class Baseball : MonoBehaviour {
     	src = gameObject.GetComponent<AudioSource>();
         rb = gameObject.GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * Random.Range(4f, 6f), ForceMode.Impulse);
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 7f);
     }
 
     private void OnCollisionEnter(Collision collision) {
-    	if(collision.gameObject.name == "Bat") {
+    	if(collision.gameObject.name == "Bat" && Rhold == true) {
     		rb.velocity = Vector3.zero;
     		src.Play();
     		Physics.IgnoreCollision(collision.gameObject.GetComponent<BoxCollider>(), gameObject.GetComponent<SphereCollider>());
@@ -38,7 +39,7 @@ public class Baseball : MonoBehaviour {
     		rb.useGravity = true;
 
     		t.enabled = true;
-    		Destroy(gameObject, 2f);
+    		Destroy(gameObject, 5f);
     	}
     }
 
