@@ -8,6 +8,6 @@ public class BeltTransfer : MonoBehaviour
     private void OnCollisionEnter(Collision otherThing)
     {
         // otherThing.gameObject.transform.position = movePosition;
-        otherThing.gameObject.transform.position = new Vector3(otherThing.gameObject.transform.position.x + 14, otherThing.gameObject.transform.position.y, otherThing.gameObject.transform.position.z);
+        otherThing.gameObject.transform.position = new Vector3(otherThing.gameObject.transform.position.x, otherThing.gameObject.transform.position.y, otherThing.gameObject.transform.position.z - 10);
     }
 }
