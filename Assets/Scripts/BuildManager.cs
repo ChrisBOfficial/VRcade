@@ -38,7 +38,6 @@ namespace Valve.VR.InteractionSystem
                 p_head.SetActive(false);
                 p_body.SetActive(false);
                 transform.position = spawnPoint;
-                rigidbody.useGravity = true;
             }
         }
     }
