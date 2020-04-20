@@ -5882,9 +5882,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1319019791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0b9f68228143344997abb9248213092, type: 3}
+  m_Script: {fileID: 11500000, guid: e0b83ace4f3460c48bb3c794f3c9b769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _head: {fileID: 1068568555}
+  _body: {fileID: 1068568554}
+  _leftArm: {fileID: 1068568553}
+  _rightArm: {fileID: 1068568552}
+  p_wheels: {fileID: 1509209154}
+  p_armLeft: {fileID: 1068568519}
+  p_armRight: {fileID: 1068568518}
+  p_head: {fileID: 1068568517}
+  p_body: {fileID: 1068568491}
+  spawnPoint: {x: -11, y: 0.73, z: 0}
 --- !u!54 &1319019793
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6895,6 +6905,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+--- !u!1 &1509209154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8509512568742298540, guid: 0159f566333b55042ad7f368f4518cd5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1068568490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1567328017
 GameObject:
   m_ObjectHideFlags: 0
