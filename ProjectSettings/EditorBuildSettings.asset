@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/RobotMovementScene.unity
     guid: 6788aa4c206ac2b4aaf08099fb90fe82
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AssemblyScene.unity
     guid: c1cb6501a65dc5843a2dcc87c810b654
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 19c733902485994448fa9075572dbf92
   m_configObjects: {}
