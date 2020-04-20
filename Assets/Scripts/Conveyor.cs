@@ -24,7 +24,7 @@ public class Conveyor : MonoBehaviour
             otherThing.gameObject.transform.position = new Vector3(otherThing.gameObject.transform.position.x, otherThing.gameObject.transform.position.y, otherThing.gameObject.transform.position.z - 0.018f);
             // otherThing.rigidbody.AddForce(direction, ForceMode.Acceleration);
         } else if (otherThing.gameObject.tag == "RobotHead") {
-            otherThing.gameObject.transform.position = new Vector3(otherThing.gameObject.transform.position.x, otherThing.gameObject.transform.position.y, otherThing.gameObject.transform.position.z - 0.006f);
+            otherThing.gameObject.transform.position = new Vector3(otherThing.gameObject.transform.position.x, otherThing.gameObject.transform.position.y, otherThing.gameObject.transform.position.z - 0.009f);
         } else {
             otherThing.gameObject.transform.position = new Vector3(otherThing.gameObject.transform.position.x, otherThing.gameObject.transform.position.y, otherThing.gameObject.transform.position.z - 0.006f);
         }
