@@ -4830,7 +4830,7 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 695212856}
   snapOffset: {x: 0, y: 0, z: 0}
-  snapRotation: {x: 0, y: 90, z: 6}
+  snapRotation: {x: 0, y: 180, z: 6}
   readyDestroy: 0
   isArm: 1
   mc_arm: {fileID: 1068568539}
@@ -4902,7 +4902,7 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 2095818154}
   snapOffset: {x: 0, y: 0, z: 0}
-  snapRotation: {x: 0, y: 90, z: -6}
+  snapRotation: {x: 0, y: 180, z: -6}
   readyDestroy: 0
   isArm: 1
   mc_arm: {fileID: 1068568545}
@@ -4974,7 +4974,7 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 1769211355}
   snapOffset: {x: 0, y: 0.1, z: 0}
-  snapRotation: {x: 0, y: 90, z: 0}
+  snapRotation: {x: 0, y: 180, z: 0}
   readyDestroy: 0
   isArm: 0
   mc_arm: {fileID: 0}
@@ -5046,7 +5046,7 @@ MonoBehaviour:
   interactable: {fileID: 0}
   snapTo: {fileID: 752152901}
   snapOffset: {x: 0, y: 0, z: 0}
-  snapRotation: {x: 0, y: 90, z: 0}
+  snapRotation: {x: 0, y: 180, z: 0}
   readyDestroy: 0
   isArm: 0
   mc_arm: {fileID: 0}
