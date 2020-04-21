@@ -22,8 +22,8 @@ public class RobotMovement : MonoBehaviour
         light.SetActive(false);
         speed = 3.0f;
         current = 0;
-        rotSpeed = 0.03f;
-        WPradius = 0.1f;
+        rotSpeed = 0.02f;
+        WPradius = 0.5f;
         timeToFix = 0f;
         currentMode = Modes.notbuilt;
     }
