@@ -4266,6 +4266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: door
       objectReference: {fileID: 0}
+    - target: {fileID: 6804374471006590677, guid: d479731d2b000453e8edeb0428c7c37a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d479731d2b000453e8edeb0428c7c37a, type: 3}
 --- !u!1 &1181326847 stripped
@@ -6462,7 +6467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef01d3446b4bfcb439c5f2ceb4e8f379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePosition: {x: -7.387, y: 0.969, z: -7.413}
 --- !u!65 &1868719230
 BoxCollider:
   m_ObjectHideFlags: 0

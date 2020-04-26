@@ -16,7 +16,7 @@ public class Drag : MonoBehaviour
  
  void Update () {
      
-     if(gameObject.transform.position.y > 1.5 && gameObject.transform.position.y < 1.7) {
+     if(gameObject.transform.position.y > 1.15 && gameObject.transform.position.y < 1.3) {
      	gameObject.GetComponent<Renderer>().material.color = Color.green;
      	if(check == false) {
      		Check.count++;
