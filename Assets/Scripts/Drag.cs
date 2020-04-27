@@ -7,6 +7,9 @@ public class Drag : MonoBehaviour
   private Vector3 screenPoint;
   private Vector3 offset;
   private bool check = false;
+
+  private bool doorState = false;
+  public Transform door;
   
   // Start is called before the first frame update
   void Start () {
@@ -21,15 +24,18 @@ public class Drag : MonoBehaviour
      	if(check == false) {
      		Check.count++;
      		check = true;
-        Debug.Log("count " + Check.count);
      	}
+        if (Check.count == 2 && doorState == false) {
+            doorState = true;
+            door.transform.rotation = Quaternion.Euler(0.0f, 0f, 0.0f);
+            door.transform.position = new Vector3(door.transform.position.x + 0.6f, door.transform.position.y, transform.position.z + 3.8f);
+        }
      }
      else {
      	gameObject.GetComponent<Renderer>().material.color = Color.red;
      	if(check == true) {
      		Check.count--; 
      		check = false;
-        Debug.Log("count " + Check.count);
      	}
      }
  }
