@@ -5,7 +5,9 @@ using UnityEngine;
 public class RobotMovement : MonoBehaviour
 {
     public Transform[] waypoints;
-    // public Transform player;
+    
+    public Transform door;
+
     public GameObject light;
 
     private float speed;
@@ -57,6 +59,8 @@ public class RobotMovement : MonoBehaviour
                     current++;
                     currentMode = Modes.built;
                     light.SetActive(true);
+                    door.transform.Rotate(0.0f, -90.0f, 0.0f, 0);
+                    door.transform.position = new Vector3(door.transform.position.x - 0.9f, door.transform.position.y, door.transform.position.z + 1);
                 }
                 break;
             case Modes.notbuilt:
